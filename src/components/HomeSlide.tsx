@@ -25,7 +25,7 @@ const HomeSlide: React.FC = () => {
       try {
         const response = await fetch(`${MOVIE_URL}?api_key=${API_KEY}&query=movies`);
         const data = await response.json();
-        setMovies(data.results.slice(0, 7));
+        setMovies(data.results.slice(0, 5));
       } catch (error) {
         console.error('Error fetching movies:', error);
       }
@@ -83,7 +83,7 @@ const HomeSlide: React.FC = () => {
         ))}
       </Slider>
 
-      <div className="flex justify-between absolute top-44 left-0 right-0 px-4">
+      <div className=" justify-between absolute top-44 left-0 right-0 px-4 xs:hidden md:flex">
         <button onClick={() => slider?.current?.slickPrev()} className="flex-grow-0">
           <div className="slick-bg">
             <ChevronLeft size={54} className="text-primary" />

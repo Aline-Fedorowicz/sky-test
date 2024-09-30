@@ -58,11 +58,11 @@ footer {
   }
 
   .home-slide-active {
-    @apply h-[390px] rounded w-full
+    @apply xs:w-[288px] xs:h-[162px] md:w-full md:h-[390px] rounded w-full
   }
 
   .home-slide {
-    @apply h-[350px] rounded mt-5 w-full
+    @apply xs:w-[288px] xs:h-[162px] md:w-full md:h-[350px] rounded mt-5 w-full
   }
 
 

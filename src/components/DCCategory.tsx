@@ -25,7 +25,7 @@ const DCCategory: React.FC = () => {
       try {
         const response = await fetch(`${MOVIE_URL}?api_key=${API_KEY}&query=dc-comics`); // Altere "avengers" para o que deseja buscar
         const data = await response.json();
-        setMovies(data.results.slice(0, 7));
+        setMovies(data.results.slice(0, 15));
       } catch (error) {
         console.error('Error fetching movies:', error);
       }
