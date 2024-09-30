@@ -2,26 +2,194 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+
+
+
+html {
+  @apply font-sans
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+
+header {
+  @apply bg-headerBackground dark:bg-dark-headerBackground
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply bg-backgroundLayout dark:bg-dark-backgroundLayout
 }
 
+footer {
+  @apply bg-footerBackground dark:bg-dark-footerBackground
+}
+
+
+
+
+.slick-dots {
+  bottom: 20px;
+  /* Ajusta a posição vertical dos dots */
+}
+
+.slick-dots li {
+  margin: 0;
+}
+
+.slick-dots li button {
+
+  /* Remove o fundo padrão */
+  border: none;
+  /* Remove a borda */
+  width: 16px;
+  /* Largura do dot */
+  height: 4px;
+  /* Altura do dot */
+  padding: 0;
+  /* Remove padding */
+}
+
+.slick-dots li button:before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  /* Fundo transparente */
+}
+
+.slick-dots li.slick-active button:before {
+  color: red !important;
+}
+
+
+
+
+
+
+
+
+
+
 @layer utilities {
+
+  .header-container {
+    @apply w-full h-auto py-2 pr-8 pl-40;
+  }
+
+  .header-circle-icon {
+    @apply w-6 h-6 flex justify-center items-center bg-headerCircleIconBackground dark:bg-dark-headerCircleIconBackground rounded-full
+  }
+
+  .header-title {
+    @apply text-sm font-bold dark:text-white/70 text-black/60 dark:hover:text-white/100 hover:text-black/100
+  }
+
+  .icons {
+    @apply dark:text-white/70 text-black/60 cursor-pointer dark:hover:text-white/100 hover:text-black/100
+  }
+
+  .nav-tab {
+    @apply w-full h-auto py-3 bg-navTab dark:bg-dark-navTab flex justify-center nav-tab-title cursor-pointer;
+  }
+
+  .nav-tab-active {
+    @apply w-full h-1 bg-primary z-10;
+  }
+
+  .nav-tab-title {
+    @apply text-sm font-bold dark:text-white/70 text-black/60 dark:hover:text-primary hover:text-primary focus:text-primary
+  }
+
+
   .text-balance {
     text-wrap: balance;
+  }
+
+  .home-slide-active {
+    @apply h-[390px] rounded w-full
+  }
+
+  .home-slide {
+    @apply h-[350px] rounded mt-5 w-full
+  }
+
+
+  .home-slide-space .slick-slide {
+    @apply px-2 cursor-pointer
+  }
+
+  .slick-bg {
+    @apply w-12 h-12 rounded-full bg-black/60 flex justify-center items-center p-2 hover:opacity-90
+  }
+
+
+  .category-title {
+    @apply text-sm font-bold dark:text-white/70 text-black/80
+  }
+
+  .category-slide {
+    @apply xs:w-[112px] md:w-[200px] xs:h-[168px] md:h-[300px] mx-auto cursor-pointer hover:opacity-60 object-cover rounded
+  }
+
+  .category-slide-space .slick-slide {
+    @apply xs:px-0 md:px-4
+  }
+
+  .circle-stroke {
+    @apply w-6 h-6 p-[2px] ring-2 ring-white bg-black/60 rounded-full
+  }
+
+
+  .footer-container {
+    @apply w-full h-auto whitespace-normal
+  }
+
+  .footer-title {
+    @apply xs:text-xs 2xl:text-sm font-bold dark:text-white/70 text-black/60 whitespace-normal w-[280px]
+  }
+
+  .footer-caption {
+    @apply xs:text-[12px] 2xl:text-xs font-normal dark:text-white/70 text-black/60 dark:hover:text-white/100 hover:text-black/100 whitespace-normal w-[280px] cursor-pointer
+  }
+
+  .footer-text {
+    @apply xs:text-[12px] 2xl:text-xs font-normal dark:text-white/70 text-black/60
+  }
+
+  .footer-container {
+    @apply bg-bgDefault dark:bg-dark-bgDefault w-full h-auto py-3 items-center justify-center space-x-2
+  }
+
+  .footer-container-caption {
+    @apply xs:text-[12px] 2xl:text-xs font-normal dark:text-white/70 text-black/60 dark:hover:text-white/100 hover:text-black/100 cursor-pointer whitespace-normal
+  }
+
+  .line {
+    @apply bg-line dark:bg-dark-line w-full h-[1px]
+  }
+
+  .line-h {
+    @apply text-xs font-normal dark:text-white/70 text-black/60
+  }
+
+
+  .card-album {
+    @apply bg-white/5 flex items-center gap-4 rounded-md overflow-hidden hover:bg-white/10 cursor-pointer transition-colors;
+  }
+
+
+  .btn-player {
+    @apply rounded-full bg-green-400 text-black ml-auto mr-8 justify-center w-12 h-12 flex items-center pl-1;
+  }
+
+  .carousel {
+    display: flex;
+    overflow: hidden;
+  }
+
+  .carousel-item {
+    margin: 0 10px;
+    flex: 0 0 auto;
+    /* Não encolher */
   }
 }
