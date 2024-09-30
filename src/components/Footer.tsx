@@ -207,7 +207,7 @@ export function Footer() {
                         <div className="line w-full mt-6 mb-5"></div>
 
                         <div className="flex flex-col gap-2">
-                            <small className="footer-title mb-1">SKY Empresas</small>
+                            <small className="footer-title -mb-5">SKY Empresas</small>
                         </div>
 
 
