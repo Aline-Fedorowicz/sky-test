@@ -39,7 +39,7 @@ const DCCategory: React.FC = () => {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 2,
+    slidesToShow: 4, // padrão para telas médias
     slidesToScroll: 1,
     arrows: false,
     draggable: true,
@@ -47,8 +47,29 @@ const DCCategory: React.FC = () => {
     centerPadding: '60px',
     autoplay: true,
     autoplaySpeed: 3000,
-
+    responsive: [
+      {
+        breakpoint: 768, // telas menores
+        settings: {
+          slidesToShow: 2, // exibe 2 slides
+          // opcional: desativa o modo centralizado
+        },
+      },
+      {
+        breakpoint: 1200, // ajuste esse valor conforme necessário para telas médias
+        settings: {
+          slidesToShow: 4, // exibe 4 slides
+        },
+      },
+      {
+        breakpoint: 2000, // ajuste esse valor conforme necessário
+        settings: {
+          slidesToShow: 7, // exibe 7 slides para telas 2XL
+        },
+      },
+    ],
   };
+
 
   return (
     <div className="home-slide-space w-full relative mt-8 xs:pl-4 md:pl-14 2xl:pl-20">

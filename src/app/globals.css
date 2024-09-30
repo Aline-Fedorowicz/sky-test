@@ -145,11 +145,15 @@ footer {
   }
 
   .footer-title {
-    @apply xs:text-xs 2xl:text-sm font-bold dark:text-white/70 text-black/60 whitespace-normal w-[280px]
+    @apply xs:text-xs 2xl:text-sm font-bold dark:text-white/70 text-black/60 whitespace-normal xs:w-[216px] md:w-[280px]
+  }
+
+  .footer-title-a {
+    @apply xs:text-xs 2xl:text-sm font-bold xs:text-primary md:dark:text-white/70 md:text-black/60 whitespace-normal xs:w-[216px] md:w-[280px]
   }
 
   .footer-caption {
-    @apply xs:text-[12px] 2xl:text-xs font-normal dark:text-white/70 text-black/60 dark:hover:text-white/100 hover:text-black/100 whitespace-normal w-[280px] cursor-pointer
+    @apply xs:text-[12px] 2xl:text-xs font-medium dark:text-white/70 text-black/60 dark:hover:text-white/100 hover:text-black/100 whitespace-normal w-[280px] cursor-pointer
   }
 
   .footer-text {

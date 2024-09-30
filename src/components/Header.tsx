@@ -1,4 +1,4 @@
-import { AArrowDown, AArrowUp, Moon, Play, Search, Sun, User } from 'lucide-react';
+import { AArrowDown, AArrowUp, Menu, Moon, Play, Search, Sun, User } from 'lucide-react';
 import Image from 'next/image'; // Certifique-se de que está usando o caminho correto para o componente Image
 
 export function Header() {
@@ -14,8 +14,12 @@ export function Header() {
                         height={33} // Defina a altura sem 'px'
                     />
 
+                    <div className='md:hidden flex absolute right-4 icons'>
+                        <Menu />
+                    </div>
 
-                    <div className="flex gap-4">
+
+                    <div className="gap-4 xs:hidden md:flex">
 
                         <div className="header-circle-icon">
                             <User size={14} className="icons" />
@@ -40,7 +44,7 @@ export function Header() {
 
                 </div>
 
-                <div className="flex ml-[114px] items-center">
+                <div className="flex ml-[114px] items-center xs:hidden md:flex">
 
                     <div className="flex items-center gap-2 cursor-pointer">
                         <Play size={16} className="icons" />
@@ -54,7 +58,7 @@ export function Header() {
 
 
 
-                <div className="flex gap-2 items-center">
+                <div className="flex gap-2 items-center xs:hidden md:flex">
                     <User size={14} className="icons" />
                     <small className="header-title cursor-pointer">Entrar</small>
 
