@@ -8,7 +8,7 @@ interface Slide {
   content: string;
 }
 
-const Carousel: React.FC = () => {
+const CarouselNav: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
   const [focusedIndex, setFocusedIndex] = useState<number | null>(null);
 
@@ -57,4 +57,4 @@ const Carousel: React.FC = () => {
   );
 };
 
-export default Carousel;
+export default CarouselNav;

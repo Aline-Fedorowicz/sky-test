@@ -14,7 +14,7 @@ interface Movie {
   poster_path: string;
 }
 
-const Carousel: React.FC = () => {
+const HomeSlide: React.FC = () => {
   const slider = React.useRef(null);
   const [movies, setMovies] = useState<Movie[]>([]);
   const [activeIndex, setActiveIndex] = useState<number>(0);
@@ -23,7 +23,7 @@ const Carousel: React.FC = () => {
   useEffect(() => {
     const fetchMovies = async () => {
       try {
-        const response = await fetch(`${MOVIE_URL}?api_key=${API_KEY}&query=movies`); // Altere "avengers" para o que deseja buscar
+        const response = await fetch(`${MOVIE_URL}?api_key=${API_KEY}&query=movies`);
         const data = await response.json();
         setMovies(data.results.slice(0, 7));
       } catch (error) {
@@ -100,4 +100,4 @@ const Carousel: React.FC = () => {
   );
 };
 
-export default Carousel;
+export default HomeSlide;

@@ -4,8 +4,6 @@
 
 
 
-
-
 html {
   @apply font-sans
 }
@@ -22,51 +20,6 @@ body {
 footer {
   @apply bg-footerBackground dark:bg-dark-footerBackground
 }
-
-
-
-
-.slick-dots {
-  bottom: 20px;
-  /* Ajusta a posição vertical dos dots */
-}
-
-.slick-dots li {
-  margin: 0;
-}
-
-.slick-dots li button {
-
-  /* Remove o fundo padrão */
-  border: none;
-  /* Remove a borda */
-  width: 16px;
-  /* Largura do dot */
-  height: 4px;
-  /* Altura do dot */
-  padding: 0;
-  /* Remove padding */
-}
-
-.slick-dots li button:before {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 100%;
-
-  /* Fundo transparente */
-}
-
-.slick-dots li.slick-active button:before {
-  color: red !important;
-}
-
-
-
-
-
-
-
 
 
 
@@ -99,7 +52,6 @@ footer {
   .nav-tab-title {
     @apply text-sm font-bold dark:text-white/70 text-black/60 dark:hover:text-primary hover:text-primary focus:text-primary
   }
-
 
   .text-balance {
     text-wrap: balance;
@@ -139,7 +91,6 @@ footer {
     @apply w-6 h-6 p-[2px] ring-2 ring-white bg-black/60 rounded-full
   }
 
-
   .footer-container {
     @apply w-full h-auto whitespace-normal
   }
@@ -176,7 +127,6 @@ footer {
     @apply text-xs font-normal dark:text-white/70 text-black/60
   }
 
-
   .card-album {
     @apply bg-white/5 flex items-center gap-4 rounded-md overflow-hidden hover:bg-white/10 cursor-pointer transition-colors;
   }
@@ -186,14 +136,38 @@ footer {
     @apply rounded-full bg-green-400 text-black ml-auto mr-8 justify-center w-12 h-12 flex items-center pl-1;
   }
 
-  .carousel {
-    display: flex;
-    overflow: hidden;
-  }
 
-  .carousel-item {
-    margin: 0 10px;
-    flex: 0 0 auto;
-    /* Não encolher */
-  }
+}
+
+
+
+.slick-dots {
+  bottom: 20px;
+  /* Ajusta a posição vertical dos dots */
+}
+
+.slick-dots li {
+  margin: 0;
+}
+
+.slick-dots li button {
+
+  /* Remove o fundo padrão */
+  border: none;
+  width: 16px;
+  height: 4px;
+  padding: 0;
+}
+
+.slick-dots li button:before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  /* Fundo transparente */
+}
+
+.slick-dots li.slick-active button:before {
+  color: red !important;
 }

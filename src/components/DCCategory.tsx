@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { ChevronLeft, ChevronRight, LockKeyhole } from 'lucide-react';
+import { LockKeyhole } from 'lucide-react';
 
 
 const API_KEY = 'a861522134785030dabad19a01334daf';
@@ -39,7 +39,7 @@ const DCCategory: React.FC = () => {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 4, // padrão para telas médias
+    slidesToShow: 4,
     slidesToScroll: 1,
     arrows: false,
     draggable: true,
@@ -49,22 +49,22 @@ const DCCategory: React.FC = () => {
     autoplaySpeed: 3000,
     responsive: [
       {
-        breakpoint: 768, // telas menores
+        breakpoint: 768,
         settings: {
-          slidesToShow: 2, // exibe 2 slides
-          // opcional: desativa o modo centralizado
+          slidesToShow: 2,
+
         },
       },
       {
-        breakpoint: 1200, // ajuste esse valor conforme necessário para telas médias
+        breakpoint: 1200,
         settings: {
-          slidesToShow: 4, // exibe 4 slides
+          slidesToShow: 4,
         },
       },
       {
-        breakpoint: 2000, // ajuste esse valor conforme necessário
+        breakpoint: 2000,
         settings: {
-          slidesToShow: 7, // exibe 7 slides para telas 2XL
+          slidesToShow: 7,
         },
       },
     ],

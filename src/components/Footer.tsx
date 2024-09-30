@@ -14,11 +14,11 @@ export function Footer() {
             <div className="flex items-center justify-between mt-3 xs:px-4 md:px-14 2xl:px-20">
                 <div className="flex items-center ">
                     <Image
-                        src="/sky-logo.svg" // Ajuste o caminho conforme necessário
-                        alt="Sky" // Texto alternativo para acessibilidade
-                        className="SKY" // Utilize className ao invés de class
-                        width={88} // Defina a largura sem 'px'
-                        height={33} // Defina a altura sem 'px'
+                        src="/sky-logo.svg"
+                        alt="Sky"
+                        className="SKY"
+                        width={88}
+                        height={33}
                     />
 
 
@@ -50,11 +50,11 @@ export function Footer() {
 
                     <div className="flex gap-4">
                         <Image
-                            src="/minha-sky.svg" // Ajuste o caminho conforme necessário
-                            alt="Sky" // Texto alternativo para acessibilidade
-                            className="SKY" // Utilize className ao invés de class
-                            width={48} // Defina a largura sem 'px'
-                            height={48} // Defina a altura sem 'px'
+                            src="/minha-sky.svg"
+                            alt="Sky"
+                            className="SKY"
+                            width={48}
+                            height={48}
                         />
 
                         <small className="footer-title-a">Baixe no seu celular o app Minha SKY e divirta-se.</small>
@@ -63,16 +63,16 @@ export function Footer() {
                     <div className=" gap-10 mt-8 xs:hidden md:flex">
 
                         <Image
-                            src="/button-apple-store-light-default.svg" // Ajuste o caminho conforme necessário
-                            width={160} // Defina a largura sem 'px'
-                            height={52} // Defina a altura sem 'px'
+                            src="/button-apple-store-light-default.svg"
+                            width={160}
+                            height={52}
                         />
 
 
                         <Image
-                            src="/button-google-play-light-default.svg" // Ajuste o caminho conforme necessário
-                            width={160} // Defina a largura sem 'px'
-                            height={52} // Defina a altura sem 'px'
+                            src="/button-google-play-light-default.svg"
+                            width={160}
+                            height={52}
                         />
 
                     </div>
@@ -143,7 +143,7 @@ export function Footer() {
                             </div>
 
                             {isOpen && (
-                                <div className="flex flex-col gap-1">
+                                <div className="flex flex-col gap-2">
                                     <small className="footer-caption">Nossa história</small>
                                     <small className="footer-caption">Imprensa</small>
                                     <small className="footer-caption">Prêmios conquistados</small>
@@ -165,7 +165,7 @@ export function Footer() {
 
 
                             {isOpen && (
-                                <div className="flex flex-col gap-1">
+                                <div className="flex flex-col gap-2">
                                     <small className="footer-caption">Conselho aos usuários</small>
                                     <small className="footer-caption">Pesquisa Anatel</small>
                                     <small className="footer-caption">Relatórios de transparência</small>
@@ -194,7 +194,7 @@ export function Footer() {
 
 
                             {isOpen && (
-                                <div className="flex flex-col gap-1">
+                                <div className="flex flex-col gap-2">
                                     <small className="footer-caption">Central de ajuda</small>
                                     <small className="footer-caption">Manuais</small>
                                 </div>

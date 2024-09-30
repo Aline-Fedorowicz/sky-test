@@ -1,4 +1,4 @@
-import { AArrowDown, AArrowUp, Menu, Moon, Play, Search, Sun, User } from 'lucide-react';
+import { AArrowDown, AArrowUp, Menu, Play, Search, User } from 'lucide-react';
 import Image from 'next/image'; // Certifique-se de que está usando o caminho correto para o componente Image
 
 export function Header() {
@@ -7,11 +7,11 @@ export function Header() {
             <div className="flex items-center justify-between">
                 <div className="flex gap-8 items-center">
                     <Image
-                        src="/sky-light-default.svg" // Ajuste o caminho conforme necessário
-                        alt="Sky Light Default" // Texto alternativo para acessibilidade
-                        className="SKYLightDefault" // Utilize className ao invés de class
-                        width={88} // Defina a largura sem 'px'
-                        height={33} // Defina a altura sem 'px'
+                        src="/sky-light-default.svg"
+                        alt="Sky Light Default"
+                        className="SKYLightDefault"
+                        width={88}
+                        height={33}
                     />
 
                     <div className='md:hidden flex absolute right-4 icons'>

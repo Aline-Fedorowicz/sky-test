@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { ChevronLeft, ChevronRight, LockKeyhole, ShoppingCart } from 'lucide-react';
+import { ShoppingCart } from 'lucide-react';
 
 
 const API_KEY = 'a861522134785030dabad19a01334daf';
@@ -17,13 +17,12 @@ interface Movie {
 const HorrorCategory: React.FC = () => {
   const slider = React.useRef(null);
   const [movies, setMovies] = useState<Movie[]>([]);
-  const [activeIndex, setActiveIndex] = useState<number>(0);
   const [focusedIndex, setFocusedIndex] = useState<number | null>(null);
 
   useEffect(() => {
     const fetchMovies = async () => {
       try {
-        const response = await fetch(`${MOVIE_URL}?api_key=${API_KEY}&query=horror`); // Altere "avengers" para o que deseja buscar
+        const response = await fetch(`${MOVIE_URL}?api_key=${API_KEY}&query=horror`);
         const data = await response.json();
         setMovies(data.results.slice(0, 7));
       } catch (error) {
@@ -37,7 +36,7 @@ const HorrorCategory: React.FC = () => {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 4, // padrão para telas médias
+    slidesToShow: 4,
     slidesToScroll: 1,
     arrows: false,
     draggable: true,
@@ -47,22 +46,22 @@ const HorrorCategory: React.FC = () => {
     autoplaySpeed: 3000,
     responsive: [
       {
-        breakpoint: 768, // telas menores
+        breakpoint: 768,
         settings: {
-          slidesToShow: 2, // exibe 2 slides
-          // opcional: desativa o modo centralizado
+          slidesToShow: 2,
+
         },
       },
       {
-        breakpoint: 1200, // ajuste esse valor conforme necessário para telas médias
+        breakpoint: 1200,
         settings: {
-          slidesToShow: 4, // exibe 4 slides
+          slidesToShow: 4,
         },
       },
       {
-        breakpoint: 2000, // ajuste esse valor conforme necessário
+        breakpoint: 2000,
         settings: {
-          slidesToShow: 7, // exibe 7 slides para telas 2XL
+          slidesToShow: 7,
         },
       },
     ],
@@ -71,7 +70,7 @@ const HorrorCategory: React.FC = () => {
 
 
   return (
-    <div className="home-slide-space w-full  relative mt-8 xs:pl-4 md:pl-14 2xl:pl-0">
+    <div className="home-slide-space w-full  relative mt-8 xs:pl-4 md:pl-14 2xl:pl-20">
       <small className='category-title mb-4 flex flex-col'>Os mais temidos</small>
       <Slider ref={slider} {...settings}>
         {movies.map((movie) => (
