@@ -25,7 +25,7 @@ export function Footer() {
 
                 </div>
 
-                <div className="flex space-x-5 items-center cursor-pointer">
+                <div className="flex space-x-5 items-center cursor-pointer icons">
                     <Facebook />
                     <Twitter />
                     <Youtube />
